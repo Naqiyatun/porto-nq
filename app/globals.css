@@ -1,33 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-basic;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.my__container {
+  @apply max-w-[1440px] sm:px-16 px-6 mx-auto;
+}
+
+.social__link {
+  @apply sm:text-3xl text-2xl text-primary hover:text-primary-80 transition duration-300;
+}
+
+.skills__content {
+  @apply grid grid-cols-2 lg:grid-cols-[158px_158px_190px_190px] justify-center gap-x-5 gap-y-10;
+}
+
+.skills__group {
+  @apply grid content-start gap-y-4;
+}
+
+.skills__data {
+  @apply flex gap-x-2;
+}
+
+.skills__data > i {
+  @apply text-base text-primary-100;
+}
+
+.skills__name {
+  @apply text-sm sm:text-base text-secondary font-medium;
+}
+
+.skills__level {
+  @apply text-xs sm:text-sm text-secondary-70;
+}
+
+.filters__button {
+  @apply p-4 text-sm sm:text-base text-primary-100 font-medium rounded-xl w-full hover:bg-tertiary cursor-pointer transition duration-300;
+}
+
+.filter__active {
+  @apply bg-tertiary;
+}
+
+.filter__inactive {
+  @apply bg-transparent;
+}
+
+header {
+  @apply sticky top-0 duration-300;
+}
+.sticky__nav {
+  @apply  top-2 bg-[rgba(238,_226,_189,_0.7)] backdrop-blur-lg shadow-sm z-[3] rounded-full;
 }

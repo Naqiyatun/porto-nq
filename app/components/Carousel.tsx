@@ -33,10 +33,10 @@ const Carousel = ({slides, video, style, currentIndex, setCurrentIndex}: Props) 
         <div className={"relative " + style}>
           <Image src={slides[currentIndex]} fill sizes='100vw' className='object-contain' alt='detail' />
         </div>
-        <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 w-[30px] h-[30px] grid place-items-center rounded-full shadow-sm bg-primary text-white hover:bg-primary-80 cursor-pointer' onClick={prevSlide}>
+        <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] -left-[15px] w-[30px] h-[30px] grid place-items-center rounded-full shadow-sm bg-primary text-white hover:bg-primary-80 cursor-pointer' onClick={prevSlide}>
           <i className="ri-arrow-left-s-line"></i>
         </div>
-        <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 w-[30px] h-[30px] grid place-items-center rounded-full shadow-sm bg-primary text-white hover:bg-primary-80 cursor-pointer' onClick={nextSlide}>
+        <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] -right-[15px] w-[30px] h-[30px] grid place-items-center rounded-full shadow-sm bg-primary text-white hover:bg-primary-80 cursor-pointer' onClick={nextSlide}>
           <i className="ri-arrow-right-s-line"></i>
         </div>
         <div className='mt-4 flex justify-center items-center gap-2 h-10'>
@@ -56,7 +56,7 @@ const Carousel = ({slides, video, style, currentIndex, setCurrentIndex}: Props) 
       video ? (
         <div className='relative w-full h-full'>
           <video controls>
-              <source src={video} type="video/mp4" />
+            <source src={video} type="video/mp4" />
               Your browser does not support the video tag.
           </video>
         </div>

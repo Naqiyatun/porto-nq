@@ -151,7 +151,12 @@ const liveProjects: { name: string, link?: string, images: string[], style?: str
       '/simpan/simpan-3.png',
       '/simpan/simpan-4.png'
     ],
-    style: 'w-full h-[85vh]'
+    style: 'w-full h-[90vw]'
+  },
+  {
+    name: 'Kecamatan Plaju Kota Palembang',
+    link: 'https://kec-plaju.palembang.go.id/',
+    images: []
   }
 ]
 const historyProjects: { cover: string, category: string, name: string, link?: string, video?: string, images: string[], style?: string }[] = [
@@ -222,7 +227,7 @@ const historyProjects: { cover: string, category: string, name: string, link?: s
     images: [
       '/my-school/index.jpg',
     ],
-    style: 'w-full h-[1400px]'
+    style: 'w-full h-[1000px] sm:h-[1400px]'
   },
   {
     cover: '/infinity/index-cut.jpg',
@@ -231,18 +236,18 @@ const historyProjects: { cover: string, category: string, name: string, link?: s
     images: [
       '/infinity/index.jpg',
     ],
-    style: 'w-full h-[1400px]'
+    style: 'w-full h-[1000px] sm:h-[1400px]'
   },
   {
     cover: '/rainfall/rainfall-2.jpg',
-    category: 'Just template',
+    category: 'With API',
     name: 'Monitoring Rainfall',
     images: [
       '/rainfall/rainfall-1.jpg',
       '/rainfall/rainfall-2.jpg',
       '/rainfall/rainfall-3.jpg'
     ],
-    style: 'w-full h-[1400px]'
+    style: 'w-full h-[90vh] sm:h-[1400px]'
   },
 ]
 

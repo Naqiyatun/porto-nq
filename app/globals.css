@@ -20,7 +20,7 @@ body {
 }
 
 .social__link {
-  @apply sm:text-3xl text-2xl text-primary hover:text-primary-80 transition duration-300;
+  @apply sm:text-3xl text-2xl text-primary hover:text-primary-80 transition duration-500;
 }
 
 .skills__content {
@@ -48,7 +48,7 @@ body {
 }
 
 .filters__button {
-  @apply p-4 text-sm sm:text-base text-primary-100 font-medium rounded-xl w-full hover:bg-tertiary cursor-pointer transition duration-300;
+  @apply p-4 text-sm sm:text-base text-primary-100 font-medium rounded-xl w-full hover:bg-tertiary cursor-pointer transition duration-500;
 }
 
 .filter__active {
@@ -60,7 +60,7 @@ body {
 }
 
 header {
-  @apply sticky top-0 duration-300;
+  @apply sticky top-0 duration-500;
 }
 .sticky__nav {
   @apply  top-2 bg-[rgba(238,_226,_189,_0.7)] backdrop-blur-lg shadow-sm z-[3] rounded-full;

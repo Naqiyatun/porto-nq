@@ -75,7 +75,7 @@ export default function Home() {
             </div>
           </div>
           <div className='flex justify-center items-center gap-4'>
-            <a download href="/pdf/CV Naqiyatun Muallifah.pdf" className="inline-flex items-center gap-x-2 py-3 px-5 mr-4 rounded-md sm:text-base text-sm text-[#fff] bg-primary shadow-lg shadow-primary-60 hover:bg-primary-80 transition duration-300">
+            <a download href="/pdf/CV Naqiyatun Muallifah.pdf" className="inline-flex items-center gap-x-2 py-3 px-5 mr-4 rounded-md sm:text-base text-sm text-[#fff] bg-primary shadow-lg shadow-primary-60 hover:bg-primary-80 transition duration-500">
               Download CV <i className="ri-download-line"></i>
             </a>
             <a href="https://www.linkedin.com/in/naqiyatun-muallifah-05995213a/" target="_blank" rel="noreferrer" className="social__link">
@@ -151,17 +151,17 @@ export default function Home() {
           <div className="mx-auto grid justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
             {liveProjects.map((dt) => (
               dt.link ? (
-                <a href={dt.link} target="_blank" rel="noreferrer" className="relative w-full h-full rounded-2xl px-4 pt-8 pb-6 shadow-sm shadow-primary-60 hover:shadow-primary-80 transition duration-300" key={dt.name}>
+                <a href={dt.link} target="_blank" rel="noreferrer" className="relative w-full h-full rounded-2xl px-4 pt-8 pb-6 shadow-sm shadow-primary-60 hover:shadow-primary-80 transition duration-500" key={dt.name}>
                   <div className="absolute w-[40px] h-[40px] -top-6 left-1/2 -translate-x-1/2 rounded-full grid place-items-center bg-primary-80 text-lg sm:text-xl text-[#fff] shadow-sm shadow-primary-60">
                     <i className="ri-link"></i>
                   </div>
                   <h3 className="text-base md:text-lg text-secondary font-medium">{dt.name}</h3>
                 </a>
               ) : (
-                <div onClick={() => {setShowModal(!showModal); setSlides(dt.images); setStyle(dt.style ? dt.style : ''); setTitleOfModal(dt.name)}} className="relative w-full h-full rounded-2xl px-4 pt-8 pb-6 shadow-sm shadow-primary-60 hover:shadow-primary-80 transition duration-300 cursor-pointer" key={dt.name}>
+                <div onClick={() => {setShowModal(!showModal); setSlides(dt.images); setStyle(dt.style ? dt.style : ''); setTitleOfModal(dt.name)}} className="relative w-full h-full rounded-2xl px-4 pt-8 pb-6 shadow-sm shadow-primary-60 hover:shadow-primary-80 transition duration-500 cursor-pointer" key={dt.name}>
                   <div className="absolute w-[40px] h-[40px] -top-6 left-1/2 -translate-x-1/2 rounded-full grid place-items-center bg-primary-80 text-lg sm:text-xl text-[#fff] shadow-sm shadow-primary-60">
-                      <i className="ri-image-line"></i>
-                    </div>
+                    <i className="ri-image-line"></i>
+                  </div>
                   <h3 className="text-base md:text-lg text-secondary font-medium">{dt.name}</h3>
                 </div>
               )
@@ -171,34 +171,33 @@ export default function Home() {
         {(filterProjects === 'History') && (
           <div className="mx-auto grid justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
             {historyProjects.map((dt) => (
-              <article className="relative w-full aspect-[6/4] rounded-2xl overflow-hidden" key={dt.name}>
-                <Image src={dt.cover} alt="preview" fill sizes='100vw' className='object-cover' />
-                <div className="absolute w-full h-4/5 bottom-0 left-0 bg-gradient-to-t from-secondary to-transparent px-5 py-6 grid items-end text-[#fff]">
-                  <div className='flex justify-between items-end gap-4'>
-                    <div>
-                    <span className="text-xs md:text-sm">{dt.category}</span>
-                      <h3 className="text-base md:text-lg font-medium">{dt.name}</h3>
+              dt.link ? (
+                <a href={dt.link} target="_blank" rel="noreferrer" className="relative w-full aspect-[6/4] rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-secondary-70/60 transition duration-500" key={dt.name}>
+                  <Image src={dt.cover} alt="preview" fill sizes='100vw' className='object-cover' />
+                  <div className="absolute w-full h-4/5 bottom-0 left-0 bg-gradient-to-t from-secondary to-transparent px-5 py-6 grid items-end text-[#fff]">
+                    <div className='flex justify-between items-end gap-4'>
+                      <div>
+                        <span className="text-xs md:text-sm">{dt.category}</span>
+                        <h3 className="text-base md:text-lg font-medium">{dt.name}</h3>
+                      </div>
+                      <i className="ri-link py-1 px-2 text-lg sm:text-xl bg-primary-80 transition duration-500 rounded-md"></i>
                     </div>
-                    {dt.link ? (
-                      <a href={dt.link} target="_blank" rel="noreferrer" className="py-1 px-2 text-lg sm:text-xl bg-primary-80 transition duration-300 hover:shadow-sm hover:shadow-primary-60 rounded-md">
-                        <i className="ri-link"></i>
-                      </a>
-                    ) : (
-                      dt.video ? (
-                        <div onClick={() => {setShowModal(!showModal); setVideo(dt.video ? dt.video : ''); setTitleOfModal(dt.name)}} className="py-1 px-2 text-lg sm:text-xl bg-primary-80 transition duration-300 hover:shadow-sm hover:shadow-primary-60 rounded-md cursor-pointer">
-                          <i className="ri-movie-line"></i>
-                        </div>
-                      ) : (
-                        (dt.images.length > 0) && (
-                          <div onClick={() => {setShowModal(!showModal); setSlides(dt.images); setStyle(dt.style ? dt.style : ''); setTitleOfModal(dt.name)}} className="py-1 px-2 text-lg sm:text-xl bg-primary-80 transition duration-300 hover:shadow-sm hover:shadow-primary-60 rounded-md cursor-pointer">
-                            <i className="ri-image-line"></i>
-                          </div>
-                        )
-                      )
-                    )}
+                  </div>
+                </a>
+              ) : (
+                <div onClick={() => {setShowModal(!showModal); ((dt.images.length > 0) && setSlides(dt.images)); setStyle(dt.style ? dt.style : ''); setVideo(dt.video ? dt.video : ''); setTitleOfModal(dt.name)}} className="relative w-full aspect-[6/4] rounded-2xl overflow-hidden cursor-pointer hover:shadow-lg hover:shadow-secondary-70/60 transition duration-500" key={dt.name}>
+                  <Image src={dt.cover} alt="preview" fill sizes='100vw' className='object-cover' />
+                  <div className="absolute w-full h-4/5 bottom-0 left-0 bg-gradient-to-t from-secondary to-transparent px-5 py-6 grid items-end text-[#fff]">
+                    <div className='flex justify-between items-end gap-4'>
+                      <div>
+                        <span className="text-xs md:text-sm">{dt.category}</span>
+                        <h3 className="text-base md:text-lg font-medium">{dt.name}</h3>
+                      </div>
+                      <i className={"py-1 px-2 text-lg sm:text-xl bg-primary-80 transition duration-500 rounded-md " + (dt.video ? "ri-movie-line" : "ri-image-line")}></i>
+                    </div>
                   </div>
                 </div>
-              </article>
+              )
             ))}
           </div>
         )}

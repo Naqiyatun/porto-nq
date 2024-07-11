@@ -111,7 +111,7 @@ const liveProjects: { name: string, link?: string, images: string[], style?: str
   },
   {
     name: 'Badan Koordinasi Hubungan Masyarakat Kota Palembang',
-    link: 'https://bako-humas.palembang.go.id/',
+    link: 'https://bakohumas.palembang.go.id/',
     images: []
   },
   {

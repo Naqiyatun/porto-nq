@@ -1,4 +1,3 @@
-
 const nav = ['Overview', 'Skills', 'Projects']
 const skillsPart1 = [
   {

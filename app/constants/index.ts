@@ -200,7 +200,7 @@ const historyProjects: { cover: string, category: string, name: string, link?: s
     cover: '/enver/index.png',
     category: 'Just template',
     name: 'Enver',
-    link: 'https://enver.vercel.app/',
+    link: 'https://enver-blush.vercel.app/',
     images: []
   },
   {
